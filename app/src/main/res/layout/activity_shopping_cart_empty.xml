@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><!--空购物车-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_shopping_cart_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@mipmap/null_icon_basket" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/shopping_cart_empty"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_stroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_red_circular_solid"
+                android:paddingBottom="10dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/stroll"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/view_selector"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/shopping_cart_empty_tip"
+            android:textColor="#555555"
+            android:textSize="16sp" />
+
+        <cc.ibooker.zshoppingcart.view.MyGridView
+            android:id="@+id/gw_empty_shopping_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</ScrollView>

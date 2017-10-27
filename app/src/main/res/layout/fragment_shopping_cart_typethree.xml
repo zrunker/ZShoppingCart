@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/layout_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:paddingStart="5dp"
+            android:paddingTop="10dp">
+
+            <CheckBox
+                android:id="@+id/cb_scart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_checkbox_one"
+                android:drawableStart="@drawable/bg_checkbox_one"
+                android:padding="5dp" />
+
+            <CheckBox
+                android:id="@+id/cb_del_scart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_checkbox_one"
+                android:drawableStart="@drawable/bg_checkbox_one"
+                android:padding="5dp"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!--商品图片-->
+                <ImageView
+                    android:id="@+id/img_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="98dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/view_selector"
+                    android:contentDescription="@null"
+                    android:padding="1dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/img_soldout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:maxHeight="95dp"
+                    android:maxWidth="95dp"
+                    android:src="@mipmap/icon_soldout"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--商品名称-->
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:paddingBottom="2dp"
+                    android:text="@string/app_name"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+                <!--规格-->
+                <TextView
+                    android:id="@+id/tv_specification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:paddingBottom="2dp"
+                    android:text="@string/specification"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <!--优惠标签-->
+                <cc.ibooker.zshoppingcart.view.FlowLayout
+                    android:id="@+id/flowlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_specification"
+                    android:paddingBottom="2dp" />
+                <!--底部-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_bottom_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:gravity="center_vertical">
+                        <!--价格-->
+                        <TextView
+                            android:id="@+id/tv_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="14sp" />
+                        <!--数量加减-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_reduce"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@null"
+                                android:src="@mipmap/icon_reduce" />
+
+                            <TextView
+                                android:id="@+id/tv_update_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:paddingEnd="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingStart="10dp"
+                                android:text="1"
+                                android:textColor="#555555" />
+
+                            <ImageView
+                                android:id="@+id/img_add"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@null"
+                                android:src="@mipmap/icon_add" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <!--税费-->
+                    <TextView
+                        android:id="@+id/tv_tax_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_bottom_top"
+                        android:drawableEnd="@mipmap/icon_arrowdown"
+                        android:drawablePadding="3dp"
+                        android:drawableRight="@mipmap/icon_arrowdown"
+                        android:textColor="#999999"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tax_rate_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textColor="#727171"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_holder"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:background="#FF4C4C"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </RelativeLayout>
+</LinearLayout>

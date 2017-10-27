@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ZShoppingCart</string>
+    <string name="delete">删除</string>
+    <string name="check_all">全选</string>
+    <string name="settlement">去结算</string>
+    <string name="total_one">（不含税运费）</string>
+    <string name="total">合计</string>
+    <string name="stroll">去逛逛吧</string>
+    <string name="shopping_cart_empty">你的购物车空空如也，快去装满它！</string>
+    <string name="shopping_cart_empty_tip">推荐商品</string>
+    <string name="shopping_cart">购物车</string>
+    <string name="edit">编辑</string>
+    <string name="specification">规格</string>
+</resources>
